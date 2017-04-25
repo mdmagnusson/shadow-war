@@ -1,23 +1,41 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import Segment from 'components/segment';
-import Button from 'components/button';
+import Member from 'components/member';
 
 export default class Home extends Component {
   render() {
     return (
       <div>
         <Helmet title="Home" />
-
-        <Segment>
-          <h1>Nothing feels like ::ffff!</h1>
-        </Segment>
-
-        <Segment>
-          <Button>Button</Button>
-          <Button href="http://ueno.co">Ueno.co</Button>
-          <Button to="/about">About</Button>
-        </Segment>
+        <Member
+          name="Captain Glory"
+          rank="leader"
+        />
+        <Member
+          name="Roboflargan"
+          rank="soldier"
+          outOfAction
+        />
+        <Member
+          name="John Smith"
+          rank="soldier"
+        />
+        <Member
+          name="Steve Bannon"
+          rank="soldier"
+        />
+        <Member
+          name="Max Dickerson"
+          rank="soldier"
+        />
+        <Member
+          name="Turd Fergusson"
+          rank="soldier"
+        />
+        <Member
+          name="Argan Flargan"
+          rank="heavy"
+        />
       </div>
     );
   }

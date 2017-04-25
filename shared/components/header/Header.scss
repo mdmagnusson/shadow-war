@@ -7,29 +7,29 @@
 
   background-color: #fff;
 
-  &__container {
-    @include container();
-  }
-
-  &__content {
-    display: flex;
-    align-items: center;
-
-    padding: $gutter 0;
-
-    border-bottom: 1px solid #ccc;
-  }
-
-  &__logo {
-    @include reset-anchor;
-
-    &Svg {
-      display: block;
-    }
-  }
-
-  &__navigation {
-    display: flex;
-    margin-left: auto;
-  }
+  // &__container {
+  //   @include container();
+  // }
+  //
+  // &__content {
+  //   display: flex;
+  //   align-items: center;
+  //
+  //   padding: $gutter 0;
+  //
+  //   border-bottom: 1px solid #ccc;
+  // }
+  //
+  // &__logo {
+  //   @include reset-anchor;
+  //
+  //   &Svg {
+  //     display: block;
+  //   }
+  // }
+  //
+  // &__navigation {
+  //   display: flex;
+  //   margin-left: auto;
+  // }
 }

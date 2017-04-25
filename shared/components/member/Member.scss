@@ -1,0 +1,136 @@
+@import '~styles/config';
+
+.member {
+  display: flex;
+  position: relative;
+
+  margin-bottom: 10px;
+
+  // border-bottom: 1px solid #ddd;
+
+  background: #fff;
+
+  &.outOfAction {
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 0;
+      height: 0;
+
+      border: 20px solid transparent;
+      border-top-color: red;
+      border-right-color: red;
+    }
+
+    &::after {
+      content: '!';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 20px;
+
+      line-height: 30px;
+      font-size: 20px;
+      text-align: center;
+      color: yellow;
+    }
+  }
+
+  &__thumbnail {
+    flex: 0 0 80px;
+
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+  }
+
+  &.leader &__thumbnail {
+    background-image: url('assets/images/officer.jpg');
+  }
+
+  &.soldier &__thumbnail {
+    background-image: url('assets/images/veteran.jpg');
+  }
+
+  &.heavy &__thumbnail {
+    background-image: url('assets/images/veteran.jpg');
+  }
+
+  &__info {
+    flex: 0 1 100%;
+    padding: 10px 20px;
+  }
+
+  &__name {
+    @include reset-heading;
+    margin-bottom: 5px;
+    font-family: $font-family-heading;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.stat {
+  flex: 0 1 auto;
+  font-size: 12px;
+
+  &__label {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 200;
+  }
+
+  &:nth-child(1) &__label::before {
+    content: 'm';
+  }
+
+  &:nth-child(2) &__label::before {
+    content: 'ws';
+  }
+
+  &:nth-child(3) &__label::before {
+    content: 'bs';
+  }
+
+  &:nth-child(4) &__label::before {
+    content: 's';
+  }
+
+  &:nth-child(5) &__label::before {
+    content: 't';
+  }
+
+  &:nth-child(6) &__label::before {
+    content: 'w';
+  }
+
+  &:nth-child(7) &__label::before {
+    content: 'i';
+  }
+
+  &:nth-child(8) &__label::before {
+    content: 'a';
+  }
+
+  &:nth-child(9) &__label::before {
+    content: 'ld';
+  }
+
+  &__field {
+    text-align: center;
+    font-weight: 400;
+  }
+}
